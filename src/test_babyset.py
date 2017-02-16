@@ -1,7 +1,6 @@
 # test_babyset.py
 # Demonstrates unit testing using the pytest module.
 # pytest must be installed through pip.
-import unittest
 
 from baby_set import BabySet
 
