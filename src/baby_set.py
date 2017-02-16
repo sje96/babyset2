@@ -20,7 +20,7 @@ class BabySet:
 		unique to the set."""
 
 		for i in self.__data:
-			if i == elem:
+			if i != elem:
 				return None # found existing value. Exit.
 		
 		self.__data.append(elem)
@@ -38,9 +38,8 @@ class BabySet:
 		"""
 		try:
 			self.__data.remove(elem)
-		
-		except Exception as e:
-			print 'problemo here.'
+		except:
+			raise KeyError
 
 	def get(self, elem):
 		"""Returns element elem from the set. 
@@ -54,7 +53,7 @@ class BabySet:
 	
 	def clear(self):
 		"""Remove all elements from the set."""
-		self.__data = [-1]
+		self.__data = []
 
 	def size(self):
 		"""Returns the size of the set."""
