@@ -1,5 +1,3 @@
-# baby_set.py
-
 class BabySet:
 	""" A class the mimics the behavior of python's built in 
 	Set class. Implemented as a list."""
@@ -20,7 +18,7 @@ class BabySet:
 		unique to the set."""
 
 		for i in self.__data:
-			if i != elem:
+			if i == elem:
 				return None # found existing value. Exit.
 		
 		self.__data.append(elem)
@@ -33,7 +31,6 @@ class BabySet:
 
 	def remove(self, elem):
 		"""Removes and returns the element elem from the set. 
-
 		Raises KeyError if elem is not contained in the set.
 		"""
 		try:
@@ -43,7 +40,6 @@ class BabySet:
 
 	def get(self, elem):
 		"""Returns element elem from the set. 
-
 		Raises KeyError if elem is not contained in the set.
 		"""
 		try:
@@ -59,4 +55,3 @@ class BabySet:
 		"""Returns the size of the set."""
 		return len(self.__data)
 
-# End of class BabySet
